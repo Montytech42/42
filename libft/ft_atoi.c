@@ -6,7 +6,7 @@
 /*   By: carlfern <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 13:17:43 by carlfern          #+#    #+#             */
-/*   Updated: 2022/09/21 14:35:58 by carlfern         ###   ########.fr       */
+/*   Updated: 2022/09/21 18:57:08 by carlfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_atoi(const char *str)
 {
-	int i;
+	int	i;
 	int	sign;
 	int	nb;
 
