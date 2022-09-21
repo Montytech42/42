@@ -6,18 +6,18 @@
 /*   By: carlfern <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 13:17:43 by carlfern          #+#    #+#             */
-/*   Updated: 2022/09/21 13:55:16 by carlfern         ###   ########.fr       */
+/*   Updated: 2022/09/21 14:35:58 by carlfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
 	int i;
 	int	sign;
 	int	nb;
-	
+
 	i = 0;
 	sign = 1;
 	nb = 0;
@@ -34,12 +34,4 @@ int	ft_atoi(const char *str)
 	while (str[i] >= '0' && str[i] <= '9')
 		nb = nb * 10 + (str[i++] - '0');
 	return (nb * sign);
-}
-
-int	main(void)
-{
-	const char *str = " 	342345";
-
-	printf("%d", ft_atoi(str));
-	return (0);
 }

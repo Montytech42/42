@@ -6,13 +6,11 @@
 /*   By: carlfern <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 18:24:12 by carlfern          #+#    #+#             */
-/*   Updated: 2022/09/17 18:36:22 by carlfern         ###   ########.fr       */
+/*   Updated: 2022/09/21 14:30:03 by carlfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int ch);
-
-int	ft_isdigit(int ch);
+#include "libft.h"
 
 int	ft_isalnum(int ch)
 {

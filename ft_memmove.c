@@ -6,13 +6,11 @@
 /*   By: carlfern <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 18:03:31 by carlfern          #+#    #+#             */
-/*   Updated: 2022/09/20 13:39:17 by carlfern         ###   ########.fr       */
+/*   Updated: 2022/09/21 14:30:34 by carlfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {

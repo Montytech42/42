@@ -6,15 +6,13 @@
 /*   By: carlfern <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 13:51:45 by carlfern          #+#    #+#             */
-/*   Updated: 2022/09/20 14:30:25 by carlfern         ###   ########.fr       */
+/*   Updated: 2022/09/21 14:32:48 by carlfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *str);
-
-size_t	ft_strlcpy(char * restrict dst, const char * restrict src, size_t dsz)
+size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dsz)
 {
 	size_t	i;
 
