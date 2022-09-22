@@ -6,11 +6,11 @@
 /*   By: carlfern <carlfern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 18:03:31 by carlfern          #+#    #+#             */
-/*   Updated: 2022/09/21 18:54:54 by carlfern         ###   ########.fr       */
+/*   Updated: 2022/09/21 19:38:05 by carlfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+//#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {
