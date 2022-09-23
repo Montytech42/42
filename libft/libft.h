@@ -6,7 +6,7 @@
 /*   By: carlfern <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 14:45:28 by carlfern          #+#    #+#             */
-/*   Updated: 2022/09/22 14:52:33 by carlfern         ###   ########.fr       */
+/*   Updated: 2022/09/22 16:32:28 by carlfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stddef.h>
+# include <stdlib.h>
 
 typedef struct s_list
 {
