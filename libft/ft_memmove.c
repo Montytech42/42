@@ -6,7 +6,7 @@
 /*   By: carlfern <carlfern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 18:03:31 by carlfern          #+#    #+#             */
-/*   Updated: 2022/09/22 15:42:53 by carlfern         ###   ########.fr       */
+/*   Updated: 2022/09/26 18:37:10 by carlfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	if (!dst || !src)
-		return (0);
 	if (dst < src)
 		return (ft_memcpy(dst, src, n));
 	else if (!n || dst == src)

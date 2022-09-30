@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carlfern <carlfern@student.42.fr>          +#+  +:+       +#+        */
+/*   By: carlfern <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/19 16:39:17 by carlfern          #+#    #+#             */
-/*   Updated: 2022/09/26 18:32:42 by carlfern         ###   ########.fr       */
+/*   Created: 2022/09/29 14:23:34 by carlfern          #+#    #+#             */
+/*   Updated: 2022/09/29 14:44:02 by carlfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	ft_lstclear(t_list **lst, void (del)(void *))
 {
-	size_t	i;
+	t_list	*temp;
+	t_list	*curr;
 
-	i = 0;
-	if (!dst && !src)
-		return (0);
-	while (i < n)
+	if (*lst == NULL)
+		return ;
+	curr = *lst;
+	while (curr != NULL)
 	{
-		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
-		i++;
+		del(curr->content);
+		temp = curr;
+		curr = curr->next;
+		free(temp);
 	}
-	return (dst);
+	*lst = NULL;
 }

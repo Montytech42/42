@@ -6,7 +6,7 @@
 /*   By: carlfern <carlfern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 13:44:10 by carlfern          #+#    #+#             */
-/*   Updated: 2022/09/22 15:42:57 by carlfern         ###   ########.fr       */
+/*   Updated: 2022/09/26 17:43:19 by carlfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	*ft_memset(void *str, int c, size_t n)
 {
 	size_t	i;
 
-	if (!str)
-		return (0);
 	i = 0;
 	while (i < n)
 	{
