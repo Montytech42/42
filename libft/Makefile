@@ -6,14 +6,14 @@
 #    By: carlfern <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/22 14:08:06 by carlfern          #+#    #+#              #
-#    Updated: 2022/09/30 13:55:01 by carlfern         ###   ########.fr        #
+#    Updated: 2022/09/30 20:11:26 by carlfern         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 LIB = ar rcs
-RM = rm -f
+RM = @rm -f
 
-CC = gcc
+CC = @gcc
 CCFLAGS = -Wall -Wextra -Werror
 
 NAME = libft.a
@@ -38,7 +38,8 @@ $(NAME): $(OBJ) $(INCLUDE)
 	$(LIB) $(NAME) $(OBJ)
 
 bonus: $(OBJ) $(BONUSOBJ) $(INCLUDE)
-	$(LIB) $(NAME) $(BONUSOBJ) $(OBJ)
+	@ar rcs $(NAME) $(BONUSOBJ) $(OBJ)
+#	@make O_OBJS="$(BONUSOBJ)"
 
 %.o: %.c
 	$(CC) $(CCFLAGS) -c -o $@ $<
