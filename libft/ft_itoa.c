@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carlfern <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: carlfern <carlfern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 15:33:01 by carlfern          #+#    #+#             */
-/*   Updated: 2022/09/26 14:21:18 by carlfern         ###   ########.fr       */
+/*   Updated: 2022/09/30 20:24:48 by carlfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_number_size(int n);
+static int		ft_number_size(int n);
 
 char	*ft_itoa(int n)
 {
@@ -39,7 +39,7 @@ char	*ft_itoa(int n)
 	return (ptr);
 }
 
-int	ft_number_size(int n)
+static int	ft_number_size(int n)
 {
 	int	size;
 
