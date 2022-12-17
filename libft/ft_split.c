@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carlfern <carlfern@student.42.fr>          +#+  +:+       +#+        */
+/*   By: carlfern <carlfern@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 16:19:38 by carlfern          #+#    #+#             */
-/*   Updated: 2022/09/30 20:25:03 by carlfern         ###   ########.fr       */
+/*   Updated: 2022/12/12 13:36:21 by carlfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,31 +16,34 @@ static int		ft_word_counter(char const *s, char c);
 
 static int		ft_word_size(char const *s, char c);
 
+static void		ft_freeptr(char **ptr, int i);
+
 char	**ft_split(char const *s, char c)
 {
-	int		wc;
-	int		i;
-	int		j;
+	int		ind[3];
 	char	**ptr;
 
-	i = 0;
-	j = 0;
-	wc = ft_word_counter(s, c);
-	ptr = (char **)malloc((wc + 1) * sizeof(char *));
+	ft_bzero(ind, 3 * sizeof (int));
+	ptr = (char **)malloc((ft_word_counter(s, c) + 1) * sizeof(char *));
 	if (!ptr)
 		return (0);
-	while (s[i] != 0)
+	while (s[ind[1]] != 0)
 	{
-		if (s[i] != c)
+		if (s[ind[1]] != c)
 		{
-			ptr[j] = ft_substr(&s[i], 0, ft_word_size(&s[i], c));
-			i = i + ft_word_size(&s[i], c);
-			j++;
+			ptr[ind[2]] = ft_substr(&s[ind[1]], 0, ft_word_size(&s[ind[1]], c));
+			if (!ptr[ind[2]])
+			{
+				ft_freeptr(ptr, ind[2]);
+				return (NULL);
+			}
+			ind[1] = ind[1] + ft_word_size(&s[ind[1]], c);
+			ind[2]++;
 		}
 		else
-			i++;
+			ind[1]++;
 	}
-	ptr[j] = 0;
+	ptr[ind[2]] = 0;
 	return (ptr);
 }
 
@@ -84,4 +87,18 @@ static int	ft_word_size(char const *s, char c)
 		i++;
 	}
 	return (j);
+}
+
+static void	ft_freeptr(char **ptr, int i)
+{
+	int	j;
+
+	j = 0;
+	while (j < i)
+	{
+		free(ptr[j]);
+		j++;
+	}
+	free(ptr);
+	return ;
 }

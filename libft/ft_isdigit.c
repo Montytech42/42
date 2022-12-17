@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carlfern <carlfern@student.42.fr>          +#+  +:+       +#+        */
+/*   By: carlfern <carlfern@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 17:54:57 by carlfern          #+#    #+#             */
-/*   Updated: 2022/09/22 15:42:20 by carlfern         ###   ########.fr       */
+/*   Updated: 2022/12/08 13:19:17 by carlfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,5 @@
 
 int	ft_isdigit(int ch)
 {
-	if (ch >= '0' && ch <= '9')
-		return (1);
-	else
-		return (0);
+	return (ch >= '0' && ch <= '9');
 }

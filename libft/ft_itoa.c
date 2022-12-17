@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carlfern <carlfern@student.42.fr>          +#+  +:+       +#+        */
+/*   By: carlfern <carlfern@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 15:33:01 by carlfern          #+#    #+#             */
-/*   Updated: 2022/09/30 20:24:48 by carlfern         ###   ########.fr       */
+/*   Updated: 2022/12/08 13:51:25 by carlfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static int	ft_number_size(int n)
 {
 	int	size;
 
-	size = 0;
+	size = 2;
 	if (n == -2147483648)
 		return (12);
 	else if (n < 0)
@@ -56,6 +56,5 @@ static int	ft_number_size(int n)
 		n = n / 10;
 		size++;
 	}
-	size += 2;
 	return (size);
 }
