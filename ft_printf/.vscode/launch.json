@@ -1,0 +1,17 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		
+		{
+			"name": "My simple debug", // can be any name, appears in the debug dropdown
+			"request": "launch",
+			"type": "cppdbg",
+			"program": "${workspaceRoot}/a.out",
+			"cwd": "${workspaceFolder}",
+			"MIMode": "lldb"
+		},
+	]
+}
